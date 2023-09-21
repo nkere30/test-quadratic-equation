@@ -34,7 +34,6 @@ public class QuadraticEquationZeroACasesTesting {
 
     @Test(expected =  IllegalArgumentException.class)
     public void testZeroACase() {
-        String zeroValueOfA = "0";
-        assertEquals(zeroValueOfA, quadraticEquation.solve(a, b, c).substring(0, 1));
+        quadraticEquation.solve(a, b, c);
     }
 }

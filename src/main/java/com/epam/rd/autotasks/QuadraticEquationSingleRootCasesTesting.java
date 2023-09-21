@@ -27,11 +27,12 @@ public class QuadraticEquationSingleRootCasesTesting {
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {1, 6, 9, -3},
+                {1, -6, 9, 3},
                 {1, -6, 9, 3},
                 {1, 14, 49, 7},
                 {1, 5, 6.25, 2.5},
-                {-4, 12, -9, -3.0/2}
+                {-4, 12, -9, -3.0/2},
+                {1, 12, 36, -6}
         });
     }
     @Test

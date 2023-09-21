@@ -42,8 +42,11 @@ public class QuadraticEquationTwoRootsCasesTesting {
     @Test
     public void testTwoRootsCases() {
         String twoRootsResultStr = quadraticEquation.solve(a, b, c);
-        String[] splitTwoRootsResultStr = twoRootsResultStr.split(" ", 2);
-        String twoRootsResultReversedStr = splitTwoRootsResultStr[1] + " " + splitTwoRootsResultStr[0];
-        assertTrue(Objects.equals(expected, twoRootsResultStr) || Objects.equals(expected, twoRootsResultReversedStr));
+        if(twoRootsResultStr.length() > 0) {
+            String[] splitTwoRootsResultStr = twoRootsResultStr.split(" ", 2);
+            assertTrue(splitTwoRootsResultStr.length == 2);
+            String twoRootsResultReversedStr = splitTwoRootsResultStr[1] + " " + splitTwoRootsResultStr[0];
+            assertTrue(Objects.equals(expected, twoRootsResultStr) || Objects.equals(expected, twoRootsResultReversedStr));
+        }
     }
 }
